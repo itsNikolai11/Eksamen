@@ -14,7 +14,7 @@ import org.example.Components.ComponentRegister;
 import org.example.Validation.ComponentValidation;
 
 public class AdminController implements Initializable {
-    ComponentRegister cr = new ComponentRegister();
+
     @FXML
     private TableView<?> componentRegisterTable;
     @FXML
@@ -45,7 +45,7 @@ public class AdminController implements Initializable {
                 double pris = Double.parseDouble(inputPrice.getText());
                 CarComponent component = new CarComponent(inputName.getText(), Double.parseDouble(inputPrice.getText()), kategorySelect.getValue());
                 registerMsg.setText("Komponent registrert!");
-                cr.addComponent(component);
+                ComponentRegister.addComponent(component);
                 clearTxtFields();
                 //TODO lagre til fil her.
             }
@@ -65,7 +65,7 @@ public class AdminController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         kategorySelect.getItems().addAll("", "Farge", "Motor", "Ekstrautstyr");
-        cr.attachTableView(componentRegisterTable);
+        ComponentRegister.attachTableView(componentRegisterTable);
     }
 
     void clearTxtFields() {
