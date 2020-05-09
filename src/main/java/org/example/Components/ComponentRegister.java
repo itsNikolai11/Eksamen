@@ -31,7 +31,6 @@ public class ComponentRegister {
         if (carComponents == null) {
             new ComponentRegister();
         }
-
         carComponents.add(component);
     }
 

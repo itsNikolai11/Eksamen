@@ -8,8 +8,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-import javafx.scene.paint.Color;
 import org.example.Components.CarComponent;
+import org.example.Components.Categories;
 import org.example.Components.ComponentRegister;
 import org.example.Validation.ComponentValidation;
 
@@ -64,7 +64,10 @@ public class AdminController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        kategorySelect.getItems().addAll("", "Farge", "Motor", "Ekstrautstyr");
+        for(Categories.Kategori cat : Categories.Kategori.values()){
+            kategorySelect.getItems().add(cat.name());
+        }
+        //kategorySelect.getItems().addAll("", Categories.Kategori.Drivstoff.toString(), "Farge", "Motorstørrelse", "Ekstrautstyr");
         ComponentRegister.attachTableView(componentRegisterTable);
     }
 
