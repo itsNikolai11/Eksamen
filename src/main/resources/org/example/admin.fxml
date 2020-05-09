@@ -78,8 +78,8 @@
               <menus>
                 <Menu mnemonicParsing="false" text="Fil">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Åpne"/>
-                    <MenuItem mnemonicParsing="false" text="Lagre"/>
+                      <MenuItem onAction="#menuFileOpenClick" text="Åpne" />
+                      <MenuItem onAction="#menuFileSaveClick" text="Lagre"/>
                     <MenuItem mnemonicParsing="false" text="Close" />
                   </items>
                 </Menu>

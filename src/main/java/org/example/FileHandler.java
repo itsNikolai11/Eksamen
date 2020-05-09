@@ -2,21 +2,21 @@ package org.example;
 
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-
+import org.example.Components.ComponentRegister;
 import java.io.File;
 
 public class FileHandler {
 
-    private enum DialogMode {Load, Save}
+    private enum DialogMode {Open, Save}
 
-    static void saveFile(Stage stage){
+    static void saveFile(Stage stage, ComponentRegister register){
         File selectedFile = fileFromChooser(DialogMode.Save, stage);
-        //Trenger feilhåndtering med info ved feil med lagring + ved suksesfull lagring.
+        //TODO Trenger feilhåndtering med info ved feil med lagring + ved suksesfull lagring.
     }
 
     static void openFile(Stage stage){
-        File selectedFile = fileFromChooser(DialogMode.Load, stage);
-        //Trenger feilhåndtering for forsøk på lesing av feil type fil + Feilmelding for evt feil ved åpning av fil.
+        File selectedFile = fileFromChooser(DialogMode.Open, stage);
+        //TODO Trenger feilhåndtering for forsøk på lesing av feil type fil + Feilmelding for evt feil ved åpning av fil.
     }
 
 
@@ -26,7 +26,7 @@ public class FileHandler {
         fileChooser.getExtensionFilters().addAll(
                 new FileChooser.ExtensionFilter("Text files", "*.txt"));
 
-        if(mode == DialogMode.Load){
+        if(mode == DialogMode.Open){
             return fileChooser.showOpenDialog(stage);
         }
         else{
@@ -35,5 +35,5 @@ public class FileHandler {
     }
 
 
-    //Måte å returnere filen valgt av fileFromChooser.
+    //TODO Måte å returnere filen valgt av fileFromChooser.
 }

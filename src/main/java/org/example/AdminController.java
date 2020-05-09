@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.paint.Color;
+import javafx.stage.Stage;
 import org.example.Components.CarComponent;
 import org.example.Components.ComponentRegister;
 import org.example.Validation.ComponentValidation;
@@ -73,4 +74,17 @@ public class AdminController implements Initializable {
         inputPrice.setText("");
         kategorySelect.setValue("");
     }
+
+    /*
+    @FXML
+    private void menuFileOpenClick() {
+        FileHandler.openFile();
+    }
+
+
+    @FXML
+    public void menuFileSaveClick(){FileHandler.saveFile();
+    }
+     */
+
 }

@@ -40,7 +40,7 @@ public class PrimaryController implements Initializable {
     }
 
     public void menuFileOpenClick(ActionEvent actionEvent) {
-        //
+
     }
 
     public void menuFileSaveClick(ActionEvent actionEvent) {
