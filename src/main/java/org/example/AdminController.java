@@ -8,6 +8,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 import org.example.Components.CarComponent;
 import org.example.Components.Categories;
 import org.example.Components.ComponentRegister;
@@ -58,16 +59,21 @@ public class AdminController implements Initializable {
     }
 
     @FXML
+    void resetConfirmation(MouseEvent event) {
+        registerMsg.setText("");
+    }
+
+    @FXML
     private void switchToPrimary() throws IOException {
         App.setRoot("user");
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        for(Categories.Kategori cat : Categories.Kategori.values()){
+        kategorySelect.getItems().add("");
+        for (Categories.Kategori cat : Categories.Kategori.values()) {
             kategorySelect.getItems().add(cat.name());
         }
-        //kategorySelect.getItems().addAll("", Categories.Kategori.Drivstoff.toString(), "Farge", "Motorstørrelse", "Ekstrautstyr");
         ComponentRegister.attachTableView(componentRegisterTable);
     }
 
