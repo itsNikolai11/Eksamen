@@ -42,7 +42,7 @@ public class LoginController {
     }
 
     void checkCredentials() throws IOException {
-        SuperUser su = new SuperUser("admin", "admin");
+        SuperUser su = SuperUserManager.getSuperUser(brukernavn.getText());
         try {
             VerifyUser.verifyUser(brukernavn.getText(), passord.getText());
         } catch (InvalidLoginException e) {

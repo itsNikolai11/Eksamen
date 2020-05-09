@@ -6,9 +6,14 @@ import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import org.example.Components.CarComponent;
 import org.example.Components.Categories;
 import org.example.Components.ComponentRegister;
@@ -81,5 +86,11 @@ public class AdminController implements Initializable {
         inputName.setText("");
         inputPrice.setText("");
         kategorySelect.setValue("");
+    }
+
+    @FXML
+    void registerUser(ActionEvent event) throws IOException {
+        App.setRoot("register");
+
     }
 }

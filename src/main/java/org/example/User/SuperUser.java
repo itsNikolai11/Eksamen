@@ -4,8 +4,6 @@ import java.io.Serializable;
 
 public class SuperUser implements Serializable {
     private String navn;
-
-
     private String passord;
 
     public SuperUser(String navn, String passord) {

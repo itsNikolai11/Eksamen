@@ -48,4 +48,13 @@ public class SuperUserManager {
         }
         return superusers;
     }
+
+    public static void registerUser(SuperUser user) throws IOException {
+        if (superusers == null) {
+            new SuperUserManager();
+        }
+        superusers.put(user.getNavn(), user);
+        SuperUserFileSaver saver = new SuperUserFileSaver();
+        saver.save();
+    }
 }
