@@ -76,8 +76,10 @@
          <top>
             <MenuBar BorderPane.alignment="CENTER">
               <menus>
-                <Menu mnemonicParsing="false" text="File">
+                <Menu mnemonicParsing="false" text="Fil">
                   <items>
+                    <MenuItem mnemonicParsing="false" text="Åpne"/>
+                    <MenuItem mnemonicParsing="false" text="Lagre"/>
                     <MenuItem mnemonicParsing="false" text="Close" />
                   </items>
                 </Menu>

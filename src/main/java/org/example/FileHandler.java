@@ -1,4 +1,4 @@
-package org.example.Gui;
+package org.example;
 
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -7,7 +7,7 @@ import java.io.File;
 
 public class FileHandler {
 
-    private enum DialogMode {Open, Save}
+    private enum DialogMode {Load, Save}
 
     static void saveFile(Stage stage){
         File selectedFile = fileFromChooser(DialogMode.Save, stage);
@@ -15,7 +15,7 @@ public class FileHandler {
     }
 
     static void openFile(Stage stage){
-        File selectedFile = fileFromChooser(DialogMode.Open, stage);
+        File selectedFile = fileFromChooser(DialogMode.Load, stage);
         //Trenger feilhåndtering for forsøk på lesing av feil type fil + Feilmelding for evt feil ved åpning av fil.
     }
 
@@ -26,7 +26,7 @@ public class FileHandler {
         fileChooser.getExtensionFilters().addAll(
                 new FileChooser.ExtensionFilter("Text files", "*.txt"));
 
-        if(mode == DialogMode.Open){
+        if(mode == DialogMode.Load){
             return fileChooser.showOpenDialog(stage);
         }
         else{

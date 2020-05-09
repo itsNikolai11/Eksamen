@@ -21,7 +21,8 @@
               <menus>
                 <Menu mnemonicParsing="false" text="Fil">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Åpne" />
+                    <MenuItem onAction="#menuFileOpenClick" text="Åpne" />
+                    <MenuItem onAction="#menuFileSaveClick" text="Lagre"/>
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Rediger">
