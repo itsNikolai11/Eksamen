@@ -10,11 +10,11 @@ public class VerifyUser {
         if (passord.isEmpty() || passord.isBlank()) {
             throw new InvalidLoginException("Du må skrive inn et passord!");
         }
-        /*SuperUserManager userManager = new SuperUserManager();
-        SuperUser user = userManager.getSuperUser(navn);
+
+        SuperUser user = SuperUserManager.getSuperUser(navn);
         if (user == null) {
             throw new InvalidLoginException("Fant ikke brukeren " + navn);
-        }*/
+        }
         return true;
     }
 }

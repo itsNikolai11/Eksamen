@@ -1,9 +1,12 @@
 package org.example;
 
 import javafx.event.ActionEvent;
+import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import org.example.Exceptions.InvalidLoginException;
 import org.example.User.SuperUser;
 import org.example.User.SuperUserManager;
@@ -27,9 +30,19 @@ public class LoginController {
 
     @FXML
     void loggInn(ActionEvent event) throws IOException, InvalidLoginException {
-        SuperUser su = new SuperUser("admin", "admin");
+        checkCredentials();
+    }
 
-        //TODO flytte dette til egen klasse - VerifyUser
+    @FXML
+    void enterPressed(KeyEvent event) throws IOException {
+        if (event.getCode() == KeyCode.ENTER) {
+            checkCredentials();
+        }
+
+    }
+
+    void checkCredentials() throws IOException {
+        SuperUser su = new SuperUser("admin", "admin");
         try {
             VerifyUser.verifyUser(brukernavn.getText(), passord.getText());
         } catch (InvalidLoginException e) {
@@ -42,5 +55,6 @@ public class LoginController {
             Dialogs.showErrorDialog("Feil passord");
         }
     }
+
 
 }

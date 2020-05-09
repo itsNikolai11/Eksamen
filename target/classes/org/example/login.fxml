@@ -27,7 +27,7 @@
         </rowConstraints>
          <children>
             <TextField fx:id="brukernavn" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <PasswordField fx:id="passord" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <PasswordField fx:id="passord" onKeyPressed="#enterPressed" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <Label text="Passord" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <Label text="Brukernavn" GridPane.columnIndex="1" />
             <Button mnemonicParsing="false" onAction="#loggInn" text="Logg inn" GridPane.columnIndex="1" GridPane.rowIndex="4" />

@@ -1,8 +1,9 @@
 package org.example.User;
 
-public class SuperUser {
-    private String navn;
+import java.io.Serializable;
 
+public class SuperUser implements Serializable {
+    private String navn;
 
 
     private String passord;

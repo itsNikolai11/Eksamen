@@ -1,37 +1,40 @@
 package org.example.Components;
 
-public class CarComponent {
-    private String navn;
-    private double pris;
-    private Kategori kategori;
+import javafx.beans.property.SimpleDoubleProperty;
+import javafx.beans.property.SimpleStringProperty;
 
-    public CarComponent(String navn, double pris, Kategori kategori) {
-        this.navn = navn;
-        this.pris = pris;
-        this.kategori = kategori;
+public class CarComponent {
+    private SimpleStringProperty navn;
+    private SimpleDoubleProperty pris;
+    private SimpleStringProperty kategori;
+
+    public CarComponent(String navn, double pris, String kategori) {
+        this.navn = new SimpleStringProperty(navn);
+        this.pris = new SimpleDoubleProperty(pris);
+        this.kategori = new SimpleStringProperty(kategori);
     }
 
     public String getNavn() {
-        return navn;
+        return navn.getValue();
     }
 
     public void setNavn(String navn) {
-        this.navn = navn;
+        this.navn = new SimpleStringProperty(navn);
     }
 
     public double getPris() {
-        return pris;
+        return pris.getValue();
     }
 
     public void setPris(double pris) {
-        this.pris = pris;
+        this.pris = new SimpleDoubleProperty(pris);
     }
 
-    public Kategori getKategori() {
-        return kategori;
+    public String getKategori() {
+        return kategori.getValue();
     }
 
-    public void setKategori(Kategori kategori) {
-        this.kategori = kategori;
+    public void setKategori(String kategori) {
+        this.kategori = new SimpleStringProperty(kategori);
     }
 }

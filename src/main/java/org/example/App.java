@@ -5,6 +5,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.example.User.SuperUserManager;
+import org.example.filbehandling.SuperUserFileOpener;
 
 import java.io.IOException;
 
@@ -18,6 +20,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("user"), 650, 500);
+        SuperUserManager.getSuperUsers();
         stage.setScene(scene);
         stage.show();
     }
