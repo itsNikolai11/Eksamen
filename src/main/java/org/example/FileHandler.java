@@ -7,14 +7,15 @@ import java.io.File;
 
 public class FileHandler {
 
+
     private enum DialogMode {Open, Save}
 
-    static void saveFile(Stage stage, ComponentRegister register){
+    public static void saveFile(Stage stage, ComponentRegister componentRegister){
         File selectedFile = fileFromChooser(DialogMode.Save, stage);
         //TODO Trenger feilhåndtering med info ved feil med lagring + ved suksesfull lagring.
     }
 
-    static void openFile(Stage stage){
+    public static void openFile(Stage stage, ComponentRegister componentRegister){
         File selectedFile = fileFromChooser(DialogMode.Open, stage);
         //TODO Trenger feilhåndtering for forsøk på lesing av feil type fil + Feilmelding for evt feil ved åpning av fil.
     }
@@ -34,6 +35,10 @@ public class FileHandler {
         }
     }
 
+
+    private File getFile(){
+      return null;
+    }
 
     //TODO Måte å returnere filen valgt av fileFromChooser.
 }

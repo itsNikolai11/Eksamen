@@ -1,5 +1,6 @@
 package org.example.User;
 
+import org.example.Components.ComponentRegister;
 import org.example.Dialogs;
 import org.example.filbehandling.SuperUserFileOpener;
 import org.example.filbehandling.SuperUserFileSaver;
@@ -14,7 +15,7 @@ public class SuperUserManager {
     private SuperUserManager() {
         SuperUserFileOpener opener = new SuperUserFileOpener();
         try {
-            superusers = (HashMap<String, SuperUser>) opener.load();
+            superusers = (HashMap<String, SuperUser>) opener.open();
             SuperUserFileSaver saver = new SuperUserFileSaver();
             try {
                 saver.save();

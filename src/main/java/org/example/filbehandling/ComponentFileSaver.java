@@ -9,7 +9,7 @@ import java.nio.file.Path;
 
 public class ComponentFileSaver implements FileSaver {
     @Override
-    public void save(ComponentRegister componentRegister, Path filePath) throws IOException {
-        Files.write(filePath, componentRegister.toString().getBytes());
+    public void save() throws IOException {
+
     }
 }

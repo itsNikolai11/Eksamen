@@ -1,6 +1,7 @@
 package org.example.filbehandling;
 
 import javafx.scene.control.Alert;
+import org.example.Components.ComponentRegister;
 import org.example.Dialogs;
 import org.example.User.SuperUserManager;
 
@@ -8,11 +9,10 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class SuperUserFileSaver implements FileSaver {
-
-
     @Override
     public void save() throws IOException {
         Thread saveThread = new Thread(() -> {
