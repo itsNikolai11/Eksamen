@@ -6,8 +6,6 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -67,19 +65,11 @@
                   <ChoiceBox fx:id="modellMeny" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                   <Label text="Bilmerke" GridPane.columnIndex="2" />
                   <Label text="Totalpris" GridPane.columnIndex="2" GridPane.rowIndex="7" />
-                  <Label fx:id="totalPrisLbl" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="7" />
+                  <Label fx:id="totalPrisLbl" text="0" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="7" />
                   <Button mnemonicParsing="false" onAction="#saveConfiguration" text="Lagre" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
                </children>
             </GridPane>
          </center>
-         <bottom>
-            <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-              <columns>
-                <TableColumn prefWidth="120.0" text="Spesifikasjon" />
-                  <TableColumn prefWidth="97.0" text="Pris" />
-              </columns>
-            </TableView>
-         </bottom>
       </BorderPane>
    </children>
 </AnchorPane>

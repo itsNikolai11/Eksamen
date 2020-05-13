@@ -40,4 +40,13 @@ public class ComponentRegister {
         }
         return carComponents;
     }
+
+    public static CarComponent getComponent(String component) {
+        for (int i = 0; i < carComponents.size(); i++) {
+            if (carComponents.get(i).getNavn().equals(component)) {
+                return carComponents.get(i);
+            }
+        }
+        return null;
+    }
 }

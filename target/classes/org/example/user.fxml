@@ -67,7 +67,7 @@
                   <ChoiceBox fx:id="modellMeny" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                   <Label text="Bilmerke" GridPane.columnIndex="2" />
                   <Label text="Totalpris" GridPane.columnIndex="2" GridPane.rowIndex="7" />
-                  <Label fx:id="totalPrisLbl" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="7" />
+                  <Label fx:id="totalPrisLbl" text="0" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="7" />
                   <Button mnemonicParsing="false" onAction="#saveConfiguration" text="Lagre" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
                </children>
             </GridPane>
