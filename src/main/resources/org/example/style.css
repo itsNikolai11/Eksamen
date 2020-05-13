@@ -1,0 +1,141 @@
+.root {
+  -fx-background: #292929;
+  padding: 10;
+}
+.label {
+-fx-font-size: 16;
+}
+.text-field {
+ -fx-background-color: #121212;
+ -fx-text-fill: #FFFFFF;
+ -fx-padding: 4;
+
+}
+.button {
+	-fx-background-color: #2D2D2D;
+	-fx-border-radius: 0;
+	-fx-text-fill: #FFFFFF;
+	-fx-border-color: #FFFFFF;
+	-fx-border-width: 1;
+	-fx-padding: 4;
+	-fx-font-size: 14;
+}
+.button:hover {
+-fx-background-color: #292929;
+}
+.table-view {
+ -fx-background-color: transparent;
+ -fx-border-color: #121212;
+ -fx-border-radius: 10;
+}
+.table-view .label {
+-fx-font-size: 12;
+}
+.table-view:focused {
+-fx-background-color: transparent;
+}
+
+.table-view .column-header-background{
+-fx-background-color: #2D2D2D;
+ -fx-background-radius: 10 10 0 0;
+ -fx-border-color: transparent transparent #121212 transparent;
+ -fx-padding: 4;
+
+}
+.table-view .column-header-background .label{
+
+    -fx-text-fill: white;
+}
+.table-view .column-header-background .filler {
+-xf-background-color: transparent;
+
+}
+
+.table-view .column-header{
+-fx-background-color: transparent;
+}
+.table-view .table-cell {
+
+-fx-text-fill: #FFFFFF;
+}
+.table-row-cell {
+-fx-background-color: #2D2D2D;
+-fx-border-color: transparent;
+}
+.table-row-cell:odd{
+-fx-background-color: #292929;
+}
+.table-row-cell:selected {
+-fx-background-color: #121212;
+-fx-border-color: #FFFFFF;
+
+}
+.table-view .filler {
+-fx-background-color: transparent;
+}
+.table-view > .virtual-flow > .scroll-bar:vertical,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track-background,
+.table-view > .virtual-flow > .scroll-bar:horizontal,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track-background {
+    -fx-background-color: transparent;
+}
+.table-view > .virtual-flow > .scroll-bar > .increment-button,
+.table-view > .virtual-flow > .scroll-bar > .decrement-button {
+    -fx-opacity: 0;
+}
+.table-view .show-hide-columns-button {
+-fx-background-color: transparent;
+}
+.menu-bar {
+-fx-background-color: #2D2D2D;
+-fx-border-color: transparent transparent #121212 transparent;
+}
+.menu-bar .container {
+-fx-background-color: transparent;
+}
+.menu {
+-fx-background-color: #2D2D2D;
+-fx-min-width: 30;
+-fx-padding: 4;
+}
+.menu .label {
+-fx-font-size: 13;
+}
+.menu-item {
+-fx-background-color: #292929;
+}
+.menu .label {
+-fx-text-fill: #FFFFFF;
+}
+.context-menu {
+-fx-background-color: #292929;
+-fx-background-radius: 0;
+-fx-background-insets: 0;
+-fx-border-color: #121212 transparent transparent transparent;
+-fx-opacity: 0.9;
+}
+.menu-item:focused {
+-fx-background-color: #121212;
+}
+.dialog-pane .button:hover {
+-fx-background-color: #292929;
+	-fx-border-radius: 0;
+	-fx-text-fill: #FFFFFF;
+	-fx-border-color: #FFFFFF;
+	-fx-border-width: 1;
+	-fx-padding: 4;
+	-fx-font-size: 14;
+}
+.choice-box {
+-fx-background-color: #121212;
+}
+.choice-box > .label {
+-fx-text-fill: #FFFFFF;
+-fx-font-size: 11;
+}
+.choice-box .menu-item > .label {
+-fx-text-fill: #FFFFFF;
+-fx-font-size: 12;
+}

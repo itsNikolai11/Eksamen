@@ -6,14 +6,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.example.User.SuperUserManager;
-import org.example.filbehandling.SuperUserFileOpener;
 
 import java.io.IOException;
 
 /**
  * JavaFX App
  */
-public class  App extends Application {
+public class App extends Application {
 
     private static Scene scene;
 
