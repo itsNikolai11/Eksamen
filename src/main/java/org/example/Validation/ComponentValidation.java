@@ -14,12 +14,13 @@ public class ComponentValidation {
             throw new IllegalArgumentException("Du må skrive inn en pris!");
         }
         try {
-            double pris = Double.parseDouble(innPris);
-            if(pris < 0){
-                throw  new IllegalArgumentException("Pris kan ikke være negativ!");
-            }
+        double pris = Double.parseDouble(innPris);
+        if (pris < 0) {
+            throw new IllegalArgumentException("Pris kan ikke være negativ!");
+        }
         } catch (NumberFormatException e) {
-            Dialogs.showErrorDialog(innPris + " er ikke en gyldig pris!");
+            throw new IllegalArgumentException(innPris + " er ikke en gyldig pris!");
+            //Dialogs.showErrorDialog(innPris + " er ikke en gyldig pris!");
         }
         return true;
     }

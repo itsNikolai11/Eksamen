@@ -96,5 +96,6 @@ public class AdminController implements Initializable {
     }
 
     public void openFileClicked(ActionEvent event) {
+
     }
 }

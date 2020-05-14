@@ -19,6 +19,5 @@ public class Dialogs {
         alert.setContentText("Lagrer data til fil. Vennligst vent.");
         alert.initModality(Modality.APPLICATION_MODAL);
         return alert;
-        //TODO kun når lagringstråden har fullført.
     }
 }

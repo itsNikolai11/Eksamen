@@ -8,7 +8,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="271" />
+    <option name="myElementSize" value="294" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -116,6 +116,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589492847089" />
+    <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1589498894378">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589498894378" />
     <state x="2685" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1588623189674">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -125,29 +129,29 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="689" y="303" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589492845608" />
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587717534212">
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589496816289">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587717534212" />
-    <state width="1877" height="488" key="GridCell.Tab.0.bottom" timestamp="1589496441993">
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589496816289" />
+    <state width="1877" height="260" key="GridCell.Tab.0.bottom" timestamp="1589499095225">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="488" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589496441993" />
+    <state width="1877" height="260" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589499095225" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588880951707" />
-    <state width="1877" height="488" key="GridCell.Tab.0.center" timestamp="1589496441993">
+    <state width="1877" height="260" key="GridCell.Tab.0.center" timestamp="1589499095224">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="488" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589496441993" />
+    <state width="1877" height="260" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589499095224" />
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588880951706" />
-    <state width="1877" height="488" key="GridCell.Tab.0.left" timestamp="1589496441992">
+    <state width="1877" height="260" key="GridCell.Tab.0.left" timestamp="1589499095224">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="488" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589496441992" />
+    <state width="1877" height="260" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589499095224" />
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588880951706" />
-    <state width="1877" height="488" key="GridCell.Tab.0.right" timestamp="1589496441993">
+    <state width="1877" height="260" key="GridCell.Tab.0.right" timestamp="1589499095225">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="488" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589496441993" />
+    <state width="1877" height="260" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589499095225" />
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588880951706" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1589492803590">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -178,6 +182,6 @@
     <SUITE FILE_PATH="coverage/Eksamen$no_nkopperudmoen_in_Eksamen.ic" NAME="no.nkopperudmoen in Eksamen Coverage Results" MODIFIED="1589494827742" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>no.nkopperudmoen.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Eksamen$All_in_Eksamen.ic" NAME="All in Eksamen Coverage Results" MODIFIED="1589493297560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Eksamen$All_in_Eksamen.ic" NAME="All in Eksamen Coverage Results" MODIFIED="1589498102986" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
