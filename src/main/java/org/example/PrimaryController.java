@@ -128,4 +128,10 @@ public class PrimaryController implements Initializable {
         //TODO Lagre konfigurasjonen på et forhåndsdefinert sted som binær fil.
         //TODO henter value fra alle choice-boksene og lagrer disse.
     }
+
+    public void saveFileClicked(ActionEvent event) {
+    }
+
+    public void openFileClicked(ActionEvent event) {
+    }
 }

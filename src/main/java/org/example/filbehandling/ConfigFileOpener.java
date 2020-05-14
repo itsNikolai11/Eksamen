@@ -7,7 +7,7 @@ import java.nio.file.Path;
 
 public class ConfigFileOpener implements FileOpener {
     @Override
-    public Object open() throws IOException, ClassNotFoundException {
+    public Object load() throws IOException, ClassNotFoundException {
 
         //TODO Logikk for åpningen av fil
 

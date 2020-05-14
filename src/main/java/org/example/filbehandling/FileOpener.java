@@ -6,5 +6,5 @@ import java.io.IOException;
 import java.nio.file.Path;
 
 public interface FileOpener {
-    Object open() throws IOException, ClassNotFoundException;
+    Object load() throws IOException, ClassNotFoundException;
 }

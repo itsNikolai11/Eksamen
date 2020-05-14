@@ -11,7 +11,7 @@ import java.nio.file.Paths;
 
 public class SuperUserFileOpener implements FileOpener {
     @Override
-    public Object open() throws IOException, ClassNotFoundException {
+    public Object load() throws IOException, ClassNotFoundException {
         InputStream is = Files.newInputStream(Paths.get("users.jobj"));
         ObjectInputStream in = new ObjectInputStream(is);
         return in.readObject();

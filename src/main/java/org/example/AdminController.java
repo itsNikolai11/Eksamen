@@ -91,4 +91,10 @@ public class AdminController implements Initializable {
         App.setRoot("register");
 
     }
+
+    public void saveFileClicked(ActionEvent event) {
+    }
+
+    public void openFileClicked(ActionEvent event) {
+    }
 }
