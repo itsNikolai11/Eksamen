@@ -15,13 +15,6 @@ public class SuperUserManager {
         SuperUserFileOpener opener = new SuperUserFileOpener();
         try {
             superusers = (HashMap<String, SuperUser>) opener.load();
-            SuperUserFileSaver saver = new SuperUserFileSaver();
-            try {
-                saver.save();
-            } catch (IOException exc) {
-                Dialogs.showErrorDialog(exc.getMessage());
-            }
-            //TODO implementere validering her
         } catch (ClassNotFoundException | IOException e) {
             superusers = new HashMap<>();
             superusers.put("admin", new SuperUser("admin", "admin"));

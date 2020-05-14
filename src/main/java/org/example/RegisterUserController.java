@@ -59,7 +59,11 @@ public class RegisterUserController {
         }
 
 
+    }
 
+    @FXML
+    void cancelRegistration(ActionEvent event) throws IOException {
+        App.setRoot("admin");
     }
 
     void resetErrorLabels() {

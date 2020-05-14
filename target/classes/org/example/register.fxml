@@ -35,10 +35,11 @@
                   <Label text="Brukernavn" />
                   <Label text="Passord" GridPane.rowIndex="1" />
                   <Label text="Bekreft passord" GridPane.rowIndex="2" />
-                  <Button fx:id="register" mnemonicParsing="false" onAction="#registerUser" text="Registrer" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                  <Button fx:id="register" mnemonicParsing="false" onAction="#registerUser" text="Registrer" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
                   <Label fx:id="nameErrLabel" textFill="RED" GridPane.columnIndex="2" />
                   <Label fx:id="passwordErrLabel" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                   <Label fx:id="confirmErrLabel" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Button mnemonicParsing="false" onAction="#cancelRegistration" text="Avbryt" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                </children>
             </GridPane>
          </children>

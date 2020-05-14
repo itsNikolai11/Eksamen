@@ -8,13 +8,10 @@ import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.MenuButton;
-import javafx.stage.Stage;
+import javafx.scene.control.*;
+import javafx.scene.layout.TilePane;
 import org.example.Components.CarComponent;
-import org.example.Components.Categories;
+import org.example.Components.Kategorier;
 import org.example.Components.ComponentRegister;
 
 public class PrimaryController implements Initializable {
@@ -27,53 +24,78 @@ public class PrimaryController implements Initializable {
     @FXML
     private ChoiceBox<String> modellMeny;
     @FXML
+    private TilePane ekstrautstyrContainer;
+    @FXML
     private Label totalPrisLbl;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        //TODO loope gjennom elementer i kategorien Drivstoff og legge de til. Forsikrer om at elementet man velger faktisk eksisterer. Oppdatere hver gang lista endres av superbruker
         drivstoffMeny.getItems().addAll("");
         modellMeny.getItems().add("");
         motorMeny.getItems().addAll("");
         fargeMeny.getItems().addAll("");
-        drivstoffMeny.getSelectionModel().selectedItemProperty().addListener((ObservableValue<? extends String> observable, String oldValue, String newValue) -> calculatePrice(drivstoffMeny, oldValue));
-        modellMeny.getSelectionModel().selectedItemProperty().addListener((ObservableValue<? extends String> observable, String oldValue, String newValue) -> calculatePrice(modellMeny, oldValue));
-        motorMeny.getSelectionModel().selectedItemProperty().addListener((ObservableValue<? extends String> observable, String oldValue, String newValue) -> calculatePrice(motorMeny, oldValue));
-        fargeMeny.getSelectionModel().selectedItemProperty().addListener((ObservableValue<? extends String> observable, String oldValue, String newValue) -> calculatePrice(fargeMeny, oldValue));
+        drivstoffMeny.getSelectionModel().selectedItemProperty().addListener((ObservableValue<? extends String> observable, String oldValue, String newValue) -> calculatePrice(newValue, oldValue));
+        modellMeny.getSelectionModel().selectedItemProperty().addListener((ObservableValue<? extends String> observable, String oldValue, String newValue) -> calculatePrice(newValue, oldValue));
+        motorMeny.getSelectionModel().selectedItemProperty().addListener((ObservableValue<? extends String> observable, String oldValue, String newValue) -> calculatePrice(newValue, oldValue));
+        fargeMeny.getSelectionModel().selectedItemProperty().addListener((ObservableValue<? extends String> observable, String oldValue, String newValue) -> calculatePrice(newValue, oldValue));
         getComponents();
-
     }
 
     void getComponents() {
         ComponentRegister.getCarComponents();
         for (CarComponent comp : ComponentRegister.getCarComponents()) {
-            if (comp.getKategori().equals(Categories.Kategori.Drivstoff.name())) {
+            if (comp.getKategori().equals(Kategorier.Kategori.Drivstoff.name())) {
                 drivstoffMeny.getItems().add(comp.getNavn());
             }
-            if (comp.getKategori().equals(Categories.Kategori.Bilmerke.name())) {
+            if (comp.getKategori().equals(Kategorier.Kategori.Bilmerke.name())) {
                 modellMeny.getItems().add(comp.getNavn());
             }
-            /*if (comp.getKategori().equals(Categories.Kategori.Ekstrautstyr.name())) {
-                modellMeny.getItems().add(comp.getNavn());
-            }*/
-            if (comp.getKategori().equals(Categories.Kategori.Farge.name())) {
+            if (comp.getKategori().equals(Kategorier.Kategori.Ekstrautstyr.name())) {
+                createCheckbox(comp);
+            }
+            if (comp.getKategori().equals(Kategorier.Kategori.Farge.name())) {
                 fargeMeny.getItems().add(comp.getNavn());
             }
-            if (comp.getKategori().equals(Categories.Kategori.Motorstørrelse.name())) {
+            if (comp.getKategori().equals(Kategorier.Kategori.Motorstørrelse.name())) {
                 motorMeny.getItems().add(comp.getNavn());
             }
         }
 
     }
 
-    void calculatePrice(ChoiceBox<String> box, String lastValue) {
-        if (box.getValue().isEmpty() || box.getValue().isBlank()) {
-            CarComponent component = ComponentRegister.getComponent(lastValue);
+    void createCheckbox(CarComponent component) {
+        CheckBox box = new CheckBox(component.getNavn());
+        box.selectedProperty().addListener((observableValue, oldValue, newValue) -> {
+            if (box.isSelected()) {
+                try {
+                    double d = Double.parseDouble(totalPrisLbl.getText());
+                    d += ComponentRegister.getComponent(box.getText()).getPris();
+                    totalPrisLbl.setText(d + "");
+                } catch (NumberFormatException e) {
+                    Dialogs.showErrorDialog("Kunne ikke beregne pris! Ugyldig tallverdi.");
+                }
+            } else {
+                try {
+                    double d = Double.parseDouble(totalPrisLbl.getText());
+                    d -= ComponentRegister.getComponent(box.getText()).getPris();
+                    totalPrisLbl.setText(d + "");
+                } catch (NumberFormatException e) {
+                    Dialogs.showErrorDialog("Kunne ikke beregne pris! Ugyldig tallverdi.");
+                }
+            }
+        });
+        ekstrautstyrContainer.getChildren().add(box);
+    }
+
+    void calculatePrice(String newValue, String lastValue) {
+        CarComponent component;
+        if (newValue.isEmpty() || newValue.isBlank()) {
+            component = ComponentRegister.getComponent(lastValue);
             if (component == null) {
                 return;
             }
             try {
-                Double d = Double.parseDouble(totalPrisLbl.getText());
+                double d = Double.parseDouble(totalPrisLbl.getText());
                 d -= component.getPris();
                 totalPrisLbl.setText(d + "");
             } catch (NumberFormatException e) {
@@ -81,13 +103,13 @@ public class PrimaryController implements Initializable {
             }
             return;
         }
-        CarComponent component = ComponentRegister.getComponent(box.getValue());
+        component = ComponentRegister.getComponent(newValue);
         if (component == null) {
-            Dialogs.showErrorDialog("Fant ikke komponenten " + box.getValue());
+            Dialogs.showErrorDialog("Fant ikke komponenten " + newValue);
             return;
         }
         try {
-            Double d = Double.parseDouble(totalPrisLbl.getText());
+            double d = Double.parseDouble(totalPrisLbl.getText());
             d += component.getPris();
             totalPrisLbl.setText(d + "");
         } catch (NumberFormatException e) {
