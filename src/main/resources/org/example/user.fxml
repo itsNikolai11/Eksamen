@@ -19,12 +19,6 @@
          <top>
             <MenuBar BorderPane.alignment="CENTER">
               <menus>
-                <Menu mnemonicParsing="false" text="Fil">
-                  <items>
-                    <MenuItem onAction="#openFileClicked" text="Åpne" />
-                    <MenuItem onAction="#saveFileClicked" text="Lagre"/>
-                  </items>
-                </Menu>
                 <Menu mnemonicParsing="false" text="Rediger">
                   <items>
                     <MenuItem mnemonicParsing="false" text="Delete" />

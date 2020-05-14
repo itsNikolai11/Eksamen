@@ -1,7 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3466efb-ca82-4400-849c-b869782236f0" name="Default Changelist" comment="" />
+    <list default="true" id="b3466efb-ca82-4400-849c-b869782236f0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/FileHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Gui/FileHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PrimaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PrimaryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/io/AdminFileStringWriter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/io/FileReader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/io/FileWriter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/io/UserFileStringWriter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/admin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/user.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/user.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Car.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/CarRegister.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/CarRegister.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Components/CarComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Components/CarComponent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Components/Categories$Kategori.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Components/Categories$Kategori.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Components/Categories.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Components/Categories.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Components/Kategorier$Kategori.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Components/Kategorier$Kategori.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Components/Kategorier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Components/Kategorier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Exceptions/InvalidLoginException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Exceptions/InvalidLoginException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Exceptions/InvalidUserException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Exceptions/InvalidUserException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Exceptions/UserAlreadyExistsException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Exceptions/UserAlreadyExistsException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/FileHandler$DialogMode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/FileHandler$DialogMode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/FileHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/FileHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Gui/AdminController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Gui/Dialogs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Gui/FileHandler$DialogMode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Gui/FileHandler$DialogMode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Gui/FileHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Gui/FileHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Gui/LoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Gui/PrimaryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Gui/SecondaryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/RegisterUserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/RegisterUserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Threads/SaveThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Threads/SaveThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/User/SuperUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/User/SuperUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/User/VerifyUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/User/VerifyUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Validation/ValidateNewUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Validation/ValidateNewUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/io/AdminFileStringWriter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/io/AdminFileStringWriter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/io/FileCarReader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/io/FileReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/io/FileReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/io/FileWriter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/io/FileWriter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/io/UserFileStringWriter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/io/UserFileStringWriter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/no/nkopperudmoen/ValidateNewUserTest.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +65,10 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -35,6 +84,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/org/example" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -94,6 +145,18 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -104,8 +167,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587461970247</updated>
+      <workItem from="1589499451889" duration="249000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="557" y="139" key="#All_in_Eksamen" timestamp="1589493422186">
@@ -177,6 +255,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="776" y="297" key="chooseDestDirectoryDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587637230768" />
+    <state x="578" y="350" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589499462479">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="578" y="350" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864@0.0.1536.864" timestamp="1589499462479" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Eksamen$no_nkopperudmoen_in_Eksamen.ic" NAME="no.nkopperudmoen in Eksamen Coverage Results" MODIFIED="1589494827742" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
