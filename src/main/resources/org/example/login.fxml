@@ -33,5 +33,6 @@
             <Button mnemonicParsing="false" onAction="#avbrytInnlogging" text="Avbryt" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
          </children>
       </GridPane>
+      <Label layoutX="187.0" layoutY="63.0" text="Default brukernavn og passord er: admin" />
    </children>
 </AnchorPane>

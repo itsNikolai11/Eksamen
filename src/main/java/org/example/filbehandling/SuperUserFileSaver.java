@@ -19,18 +19,17 @@ public class SuperUserFileSaver implements FileSaver {
 
         Thread saveThread = new Thread(() -> {
             try {
-                synchronized (this) {
+
                     OutputStream os = Files.newOutputStream(Paths.get("users.jobj"));
                     ObjectOutputStream out = new ObjectOutputStream(os);
                     out.writeObject(SuperUserManager.getSuperUsers());
                     Thread.sleep(5000);
                     System.out.println("Lagring fullført");
-                }
+
             } catch (InterruptedException | IOException e) {
                 System.out.println(e.getMessage());
             }
         });
-        alert.setContentText("Lagrer, vennligst vent..");
         alert.show();
         saveThread.start();
         try {
