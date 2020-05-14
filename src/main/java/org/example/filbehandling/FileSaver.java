@@ -5,3 +5,4 @@ import java.io.IOException;
 public interface FileSaver {
     void save() throws IOException, InterruptedException;
 }
+

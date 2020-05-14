@@ -11,7 +11,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
+import javafx.scene.paint.Color;
 import org.example.Components.CarComponent;
 import org.example.Components.Kategorier;
 import org.example.Components.ComponentRegister;
@@ -85,10 +86,10 @@ public class AdminController implements Initializable {
         inputPrice.setText("");
         kategorySelect.setValue("");
     }
-
-    @FXML
-    void registerUser(ActionEvent event) throws IOException {
-        App.setRoot("register");
-
+    public void openFileClicked(ActionEvent actionEvent) {
+        FileHandler.openFile();
     }
+    public void saveFileClicked(ActionEvent actionEvent) {
+    }
+        FileHandler.saveFile();
 }

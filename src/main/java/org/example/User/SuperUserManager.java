@@ -1,5 +1,6 @@
 package org.example.User;
 
+import org.example.Components.ComponentRegister;
 import org.example.Dialogs;
 import org.example.filbehandling.SuperUserFileOpener;
 import org.example.filbehandling.SuperUserFileSaver;
