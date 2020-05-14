@@ -10,6 +10,8 @@ public class ComponentFileOpener implements FileOpener {
     @Override
     public Object open() throws IOException, ClassNotFoundException {
 
+
+
      //TODO Logikk for åpningen av fil
 
      //TODO Logikk for sjekking av filmen er formatert riktig

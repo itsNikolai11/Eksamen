@@ -3,14 +3,31 @@ package org.example.Components;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TableView;
+import org.example.Dialogs;
+import org.example.filbehandling.ComponentFileOpener;
+import org.example.filbehandling.ComponentFileSaver;
+
+import java.io.IOException;
 
 public class ComponentRegister {
+
     private static ObservableList<CarComponent> carComponents;
 
     //TODO lagre denne listen til fil hver gang en ny komponent legges til eller endres i admin-vindu
+
     private ComponentRegister() {
         carComponents = FXCollections.observableArrayList();
+        ComponentFileOpener opener = new ComponentFileOpener();
+
+        try{
+            ComponentFileSaver saver = new ComponentFileSaver();
+            saver.save();
+        }  catch (IOException e){
+            e.printStackTrace();
+        }
+
         //TODO last inn lagrede komponenter
+
     }
 
     public static void attachTableView(TableView tv) {

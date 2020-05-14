@@ -75,14 +75,6 @@ public class AdminController implements Initializable {
         kategorySelect.setValue("");
     }
 
-    public void openFileClicked(ActionEvent actionEvent) {
-        FileHandler.openFile();
-    }
-
-    public void saveFileClicked(ActionEvent actionEvent) {
-        FileHandler.saveFile();
-    }
-
     /*
     @FXML
     private void menuFileOpenClick() {
