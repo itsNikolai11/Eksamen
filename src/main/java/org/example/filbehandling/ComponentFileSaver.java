@@ -13,6 +13,8 @@ public class ComponentFileSaver implements FileSaver {
     public void save() throws IOException {
         ComponentRegister.getCarComponents();
         System.out.println("Komponenter lagret");
+
+
         //TODO Komponent array til fil.
 
        // Files.write(ComponentRegister.getCarComponents())
