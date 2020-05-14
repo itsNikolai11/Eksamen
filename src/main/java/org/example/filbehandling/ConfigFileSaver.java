@@ -8,6 +8,5 @@ import java.nio.file.Path;
 public class ConfigFileSaver implements FileSaver {
     @Override
     public void save() throws IOException, InterruptedException {
-
     }
 }

@@ -1,5 +1,6 @@
 package org.example;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -24,7 +25,8 @@ public class PrimaryController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        //TODO loope gjennom elementer i kategorien Drivstoff og legge de til. Forsikrer om at elementet man velger faktisk eksisterer. Oppdatere hver gang lista endres av superbruker
+        //TODO loope gjennom elementer i kategorien Drivstoff og legge de til.
+        // Forsikrer om at elementet man velger faktisk eksisterer. Oppdatere hver gang lista endres av superbruker
         drivstoffMeny.getItems().addAll("", "Bensin", "Diesel", "Elektrisitet", "Gass");
         motorMeny.getItems().addAll("", "1.9L", "2.0L", "3.0L");
         fargeMeny.getItems().addAll("", "Grønn", "Svart", "Sølv", "Grå", "Blå", "Rød");
@@ -37,13 +39,5 @@ public class PrimaryController implements Initializable {
     @FXML
     private void switchToSecondary() throws IOException {
         App.setRoot("login");
-    }
-
-    public void menuFileOpenClick(ActionEvent actionEvent) {
-
-    }
-
-    public void menuFileSaveClick(ActionEvent actionEvent) {
-
     }
 }

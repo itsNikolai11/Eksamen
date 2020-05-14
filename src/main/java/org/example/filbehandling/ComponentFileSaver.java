@@ -11,5 +11,11 @@ public class ComponentFileSaver implements FileSaver {
     @Override
     public void save() throws IOException {
 
+        save();
+        //TODO Komponent array til fil.
+
+       // Files.write(ComponentRegister.getCarComponents())
+        //TODO prefikse lokasjon på fil
+
     }
 }

@@ -17,4 +17,8 @@ public class SecondaryController {
         App.setRoot("user");
     }
 
+    @FXML
+    private void openFileButtonPressed()throws IOException{
+
+    }
 }

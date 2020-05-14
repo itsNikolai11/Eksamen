@@ -15,6 +15,7 @@ public class ComponentFileOpener implements FileOpener {
      //TODO Logikk for sjekking av filmen er formatert riktig
 
      //TODO Parsing av string.
+
         return null;
     }
 }
