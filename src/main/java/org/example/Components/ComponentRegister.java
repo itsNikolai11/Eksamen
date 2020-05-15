@@ -22,7 +22,7 @@ public class ComponentRegister {
         }  catch (IOException exc){
             Dialogs.showErrorDialog(exc.getMessage());
         }
-*/
+        */
         //TODO last inn lagrede komponenter
     }
 
