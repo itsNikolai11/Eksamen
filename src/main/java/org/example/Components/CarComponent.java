@@ -6,8 +6,9 @@ import javafx.beans.property.SimpleStringProperty;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 
-public class CarComponent {
+public class CarComponent implements Serializable {
     private SimpleStringProperty navn;
     private SimpleDoubleProperty pris;
     private SimpleStringProperty kategori;
@@ -43,18 +44,17 @@ public class CarComponent {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return navn.getValue() + ";" + pris.getValue() + ";" + kategori.getValue();
     }
 
-    private void writeObject(ObjectOutputStream s)throws IOException {
-        s.defaultWriteObject();
+    private void writeObject(ObjectOutputStream s) throws IOException {
         s.writeUTF(navn.getValue());
         s.writeDouble(pris.getValue());
         s.writeUTF(kategori.getValue());
     }
 
-    private void readObject(ObjectInputStream s)throws IOException, ClassNotFoundException{
+    private void readObject(ObjectInputStream s) throws IOException, ClassNotFoundException {
         String navn = s.readUTF();
         double pris = s.readDouble();
         String kategori = s.readUTF();

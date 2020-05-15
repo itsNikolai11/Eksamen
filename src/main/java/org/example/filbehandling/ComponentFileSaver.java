@@ -13,22 +13,21 @@ import java.io.OutputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
 
 public class ComponentFileSaver implements FileSaver {
-    @Override
-    public void save() throws IOException {
+    public void save(List<CarComponent> components) throws IOException {
         Alert alert = Dialogs.showSaveDialog();
 
         Thread saveThread = new Thread(() -> {
             try {
-
-                OutputStream os = Files.newOutputStream(Paths.get("components.jobj"));
+                OutputStream os = Files.newOutputStream(Paths.get("component.jobj"));
                 ObjectOutputStream out = new ObjectOutputStream(os);
-                out.writeObject(ComponentRegister.getCarComponents());
+                out.writeObject(components);
                 Thread.sleep(5000);
 
             } catch (InterruptedException | IOException e) {
-                System.out.println(e.getMessage());
+                e.printStackTrace();
             }
         });
         alert.show();
@@ -39,6 +38,11 @@ public class ComponentFileSaver implements FileSaver {
             Dialogs.showErrorDialog(e.getMessage());
         }
         alert.close();
+
+    }
+
+    @Override
+    public void save() throws IOException, InterruptedException {
 
     }
 }

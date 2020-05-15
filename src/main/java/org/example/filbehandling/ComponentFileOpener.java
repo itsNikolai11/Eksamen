@@ -13,7 +13,7 @@ public class ComponentFileOpener implements FileOpener {
 
     @Override
     public Object load() throws IOException, ClassNotFoundException {
-        InputStream is = Files.newInputStream(Paths.get("components.jobj"));
+        InputStream is = Files.newInputStream(Paths.get("component.jobj"));
         ObjectInputStream in = new ObjectInputStream(is);
         return in.readObject();
     }
