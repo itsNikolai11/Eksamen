@@ -8,6 +8,8 @@ import org.example.filbehandling.ComponentFileOpener;
 import org.example.filbehandling.ComponentFileSaver;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ComponentRegister {
     private static ObservableList<CarComponent> carComponents;
@@ -15,16 +17,18 @@ public class ComponentRegister {
     //TODO lagre denne listen til fil hver gang en ny komponent legges til eller endres i admin-vindu
     private ComponentRegister() {
         ComponentFileOpener opener = new ComponentFileOpener();
-        try{
+        try {
             carComponents = (ObservableList<CarComponent>) opener.load();
-        }  catch (ClassNotFoundException | IOException e){
-            Dialogs.showErrorDialog(e.getMessage());
-            ComponentFileSaver saver = new ComponentFileSaver();
-            try{
+        } catch (ClassNotFoundException | IOException e) {
+            carComponents = FXCollections.observableArrayList();
+            //TODO Det under gir error ved oppstart - Muligens fikset når lagringa fungerer
+           // Dialogs.showErrorDialog(e.getMessage());
+           /* ComponentFileSaver saver = new ComponentFileSaver();
+            try {
                 saver.save();
-            }catch (IOException e1){
+            } catch (IOException e1) {
                 Dialogs.showErrorDialog(e1.getMessage());
-            }
+            }*/
 
         }
 
@@ -66,5 +70,9 @@ public class ComponentRegister {
             }
         }
         return null;
+    }
+
+    public static void saveComponents() {
+
     }
 }

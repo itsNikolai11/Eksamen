@@ -26,7 +26,6 @@ public class ComponentFileSaver implements FileSaver {
                 ObjectOutputStream out = new ObjectOutputStream(os);
                 out.writeObject(ComponentRegister.getCarComponents());
                 Thread.sleep(5000);
-                System.out.println("Lagring fullført");
 
             } catch (InterruptedException | IOException e) {
                 System.out.println(e.getMessage());
