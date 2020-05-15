@@ -3,10 +3,12 @@ package org.example.Components;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleStringProperty;
 
-public class CarComponent {
-    private SimpleStringProperty navn;
-    private SimpleDoubleProperty pris;
-    private SimpleStringProperty kategori;
+import java.io.Serializable;
+
+public class CarComponent implements Serializable {
+    private transient SimpleStringProperty navn;
+    private transient SimpleDoubleProperty pris;
+    private transient SimpleStringProperty kategori;
 
     public CarComponent(String navn, double pris, String kategori) {
         this.navn = new SimpleStringProperty(navn);
@@ -36,5 +38,6 @@ public class CarComponent {
 
     public void setKategori(String kategori) {
         this.kategori = new SimpleStringProperty(kategori);
+
     }
 }

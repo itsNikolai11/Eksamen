@@ -9,7 +9,9 @@ public class Dialogs {
         alert.setTitle("En feil har oppstått!");
         alert.setHeaderText(null);
         alert.setContentText(msg);
+        alert.initModality(Modality.WINDOW_MODAL);
         alert.show();
+
     }
 
     public static Alert showSaveDialog() {
