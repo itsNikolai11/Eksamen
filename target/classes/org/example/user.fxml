@@ -65,6 +65,7 @@
                   <Button mnemonicParsing="false" onAction="#saveConfiguration" text="Lagre" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
                   <Label text="Ekstrautstyr" GridPane.columnIndex="3" GridPane.rowIndex="4" />
                   <TilePane fx:id="ekstrautstyrContainer" prefHeight="40.0" prefWidth="217.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                  <Button mnemonicParsing="false" onAction="#loadConfig" text="Åpne.." GridPane.columnIndex="2" GridPane.rowIndex="8" />
                </children>
             </GridPane>
          </center>

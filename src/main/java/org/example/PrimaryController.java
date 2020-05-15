@@ -1,10 +1,11 @@
 package org.example;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
+import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -14,6 +15,8 @@ import javafx.scene.layout.TilePane;
 import org.example.Components.CarComponent;
 import org.example.Components.Kategorier;
 import org.example.Components.ComponentRegister;
+import org.example.filbehandling.ConfigFileOpener;
+import org.example.filbehandling.ConfigFileSaver;
 
 public class PrimaryController implements Initializable {
     @FXML
@@ -29,17 +32,44 @@ public class PrimaryController implements Initializable {
     @FXML
     private Label totalPrisLbl;
 
+    public static ArrayList<String> configuration = new ArrayList<>();
+    private ChangeListener priceListener = new ChangeListener<String>() {
+        @Override
+        public void changed(ObservableValue<? extends String> observableValue, String oldValue, String newValue) {
+            calculatePrice(newValue, oldValue);
+        }
+    };
+    private ChangeListener configListener = (ChangeListener<String>) (observableValue, oldValue, newValue) -> {
+        configuration.remove(oldValue);
+        configuration.add(newValue);
+    };
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         drivstoffMeny.getItems().addAll("");
         modellMeny.getItems().add("");
         motorMeny.getItems().addAll("");
         fargeMeny.getItems().addAll("");
-        drivstoffMeny.getSelectionModel().selectedItemProperty().addListener((ObservableValue<? extends String> observable, String oldValue, String newValue) -> calculatePrice(newValue, oldValue));
-        modellMeny.getSelectionModel().selectedItemProperty().addListener((ObservableValue<? extends String> observable, String oldValue, String newValue) -> calculatePrice(newValue, oldValue));
-        motorMeny.getSelectionModel().selectedItemProperty().addListener((ObservableValue<? extends String> observable, String oldValue, String newValue) -> calculatePrice(newValue, oldValue));
-        fargeMeny.getSelectionModel().selectedItemProperty().addListener((ObservableValue<? extends String> observable, String oldValue, String newValue) -> calculatePrice(newValue, oldValue));
+        drivstoffMeny.getSelectionModel().selectedItemProperty().addListener(priceListener);
+        modellMeny.getSelectionModel().selectedItemProperty().addListener(priceListener);
+        motorMeny.getSelectionModel().selectedItemProperty().addListener(priceListener);
+        fargeMeny.getSelectionModel().selectedItemProperty().addListener(priceListener);
+        addListeners();
         getComponents();
+    }
+
+    void addListeners() {
+        drivstoffMeny.getSelectionModel().selectedItemProperty().addListener(configListener);
+        modellMeny.getSelectionModel().selectedItemProperty().addListener(configListener);
+        motorMeny.getSelectionModel().selectedItemProperty().addListener(configListener);
+        fargeMeny.getSelectionModel().selectedItemProperty().addListener(configListener);
+    }
+
+    void removeListeners() {
+        drivstoffMeny.getSelectionModel().selectedItemProperty().removeListener(configListener);
+        modellMeny.getSelectionModel().selectedItemProperty().removeListener(configListener);
+        motorMeny.getSelectionModel().selectedItemProperty().removeListener(configListener);
+        fargeMeny.getSelectionModel().selectedItemProperty().removeListener(configListener);
     }
 
     void getComponents() {
@@ -62,6 +92,60 @@ public class PrimaryController implements Initializable {
             }
         }
 
+    }
+
+    @FXML
+    void loadConfig() {
+        ConfigFileOpener opener = new ConfigFileOpener();
+        try {
+            configuration = opener.load();
+        } catch (IOException | ClassNotFoundException e) {
+            Dialogs.showErrorDialog("En feil oppstod under innlasting av fil. \n" + e.getMessage());
+        }
+        removeListeners();
+        verifyConfig();
+        for (String s : configuration) {
+            CarComponent comp = ComponentRegister.getComponent(s);
+            if (comp.getKategori().equals(Kategorier.Kategori.Drivstoff.name())) {
+                drivstoffMeny.setValue(comp.getNavn());
+            }
+            if (comp.getKategori().equals(Kategorier.Kategori.Bilmerke.name())) {
+                modellMeny.setValue(comp.getNavn());
+            }
+            if (comp.getKategori().equals(Kategorier.Kategori.Ekstrautstyr.name())) {
+                createCheckbox(comp);
+                //TODO marker checkboxene med komponenten.
+
+            }
+            if (comp.getKategori().equals(Kategorier.Kategori.Farge.name())) {
+                fargeMeny.setValue(comp.getNavn());
+            }
+            if (comp.getKategori().equals(Kategorier.Kategori.Motorstørrelse.name())) {
+                motorMeny.setValue(comp.getNavn());
+            }
+        }
+        addListeners();
+    }
+
+    void verifyConfig() {
+        for (String s : configuration) {
+            CarComponent comp = ComponentRegister.getComponent(s);
+            //TODO dette fungerer ikke
+            if (comp == null) {
+                Dialogs.showErrorDialog("Konfigurasjonen inneholder ugyldige komponenter");
+                configuration.remove(s);
+                return;
+            }
+        }
+    }
+
+    void saveConfig() {
+        ConfigFileSaver saver = new ConfigFileSaver();
+        try {
+            saver.save();
+        } catch (IOException | InterruptedException e) {
+            Dialogs.showErrorDialog("Kunne ikke lagre fil! \n" + e.getMessage());
+        }
     }
 
     void createCheckbox(CarComponent component) {
@@ -125,7 +209,6 @@ public class PrimaryController implements Initializable {
 
     @FXML
     void saveConfiguration(ActionEvent event) {
-        //TODO Lagre konfigurasjonen på et forhåndsdefinert sted som binær fil.
-        //TODO henter value fra alle choice-boksene og lagrer disse.
+        saveConfig();
     }
 }
