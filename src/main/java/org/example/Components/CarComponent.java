@@ -3,6 +3,10 @@ package org.example.Components;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleStringProperty;
 
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+
 public class CarComponent {
     private SimpleStringProperty navn;
     private SimpleDoubleProperty pris;
@@ -36,5 +40,28 @@ public class CarComponent {
 
     public void setKategori(String kategori) {
         this.kategori = new SimpleStringProperty(kategori);
+    }
+
+    @Override
+    public String toString(){
+        return navn.getValue() + ";" + pris.getValue() + ";" + kategori.getValue();
+    }
+
+    private void writeObject(ObjectOutputStream s)throws IOException {
+        s.defaultWriteObject();
+        s.writeUTF(navn.getValue());
+        s.writeDouble(pris.getValue());
+        s.writeUTF(kategori.getValue());
+    }
+
+    private void readObject(ObjectInputStream s)throws IOException, ClassNotFoundException{
+        String navn = s.readUTF();
+        double pris = s.readDouble();
+        String kategori = s.readUTF();
+
+        this.navn = new SimpleStringProperty(navn);
+        this.pris = new SimpleDoubleProperty(pris);
+        this.kategori = new SimpleStringProperty(kategori);
+
     }
 }

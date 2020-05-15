@@ -22,7 +22,7 @@ public class ComponentFileSaver implements FileSaver {
         Thread saveThread = new Thread(() -> {
             try {
 
-                OutputStream os = Files.newOutputStream(Paths.get("components.txt"));
+                OutputStream os = Files.newOutputStream(Paths.get("components.jobj"));
                 ObjectOutputStream out = new ObjectOutputStream(os);
                 out.writeObject(ComponentRegister.getCarComponents());
                 Thread.sleep(5000);

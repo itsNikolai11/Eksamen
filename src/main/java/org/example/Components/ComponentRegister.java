@@ -8,6 +8,10 @@ import org.example.filbehandling.ComponentFileOpener;
 import org.example.filbehandling.ComponentFileSaver;
 
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ComponentRegister {
     private static ObservableList<CarComponent> carComponents;
@@ -22,13 +26,11 @@ public class ComponentRegister {
             ComponentFileSaver saver = new ComponentFileSaver();
             try{
                 saver.save();
-            }catch (IOException e1){
-                Dialogs.showErrorDialog(e1.getMessage());
+            }catch (IOException exc){
+                Dialogs.showErrorDialog(exc.getMessage());
             }
 
         }
-
-        //TODO last inn lagrede komponenter
     }
 
     public static void attachTableView(TableView tv) {
@@ -66,5 +68,16 @@ public class ComponentRegister {
             }
         }
         return null;
+    }
+
+    private void writeObject(ObjectOutputStream s)throws IOException{
+        s.defaultWriteObject();
+        s.writeObject(new ArrayList<>(carComponents));
+    }
+
+    private void readObject(ObjectInputStream s) throws IOException, ClassNotFoundException{
+        List<CarComponent> list = (List<CarComponent>) s.readObject();
+        carComponents = FXCollections.observableArrayList();
+        carComponents.addAll(list);
     }
 }
